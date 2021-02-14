@@ -43,4 +43,4 @@ sudo docker-compose run web python manage.py migrate
 ````
 sudo docker-compose up
 ````
-После этого станет доступен веб-интерфейс по адресу http://localhost
+После этого сервис станет доступен по адресу http://localhost
