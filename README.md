@@ -8,7 +8,7 @@ Cоздан в качестве дипломного проекта учебно
 
 ## Стек технологий
 - проект написан на Python с использованием веб-фреймворка Django.
-- деплой на сервере - nginx, ginicorn
+- деплой на сервере - nginx, gunicorn
 - база данных PostgreSQL
 - автоматическое развертывание проекта - Docker, docker-compose
 
@@ -24,11 +24,11 @@ DB_ENGINE=django.db.backends.postgresql
 DB_NAME=(укажите название вашей БД, для подключения django)
 POSTGRES_USER=(укажите имя пользователя вашей БД)
 POSTGRES_PASSWORD=(укажите пароль к БД)
-POSTGRES_DB=(укажите название вашей БД, для создания ее в PosgresQl
- в случае запуска проекта через контейнеры докера)
+POSTGRES_DB=(укажите название вашей БД)
 DB_HOST=db
 DB_PORT=5432
 SECRET_KEY=(укажите свой ключ)
+DEBUG=False
 ```
 Чтобы собрать образ выполните команду:
 ````
@@ -43,3 +43,4 @@ sudo docker-compose run web python manage.py migrate
 ````
 sudo docker-compose up
 ````
+После этого станет доступен веб-интерфейс по адресу http://localhost
