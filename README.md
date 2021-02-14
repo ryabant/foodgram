@@ -30,7 +30,7 @@ DB_PORT=5432
 SECRET_KEY=(укажите свой ключ)
 DEBUG=False
 ```
-Чтобы собрать образ выполните команду:
+Чтобы собрать образ из директории с docker-compose.yaml выполните команду:
 ````
 sudo docker-compose build
 ````
@@ -44,3 +44,9 @@ sudo docker-compose run web python manage.py migrate
 sudo docker-compose up
 ````
 После этого сервис станет доступен по адресу http://localhost
+
+Для заполнения базы данными выполните команду:
+````
+sudo docker-compose run web python manage.py add_ing_data
+sudo docker-compose run web python manage.py add_tags_data
+````
